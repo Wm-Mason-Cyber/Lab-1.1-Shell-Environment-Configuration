@@ -71,7 +71,8 @@ The next few steps you will do in all 3 instances, so you can explore how they w
         
     - To edit via terminal: <code>nano .bashrc</code> 
     > [!TIP] 
-    > There are many CLI text editor beyond <code>nano</code> as well.
+    >
+    > There are many CLI text editors beyond <code>nano</code> as well.
     
     </details>
 
@@ -86,7 +87,11 @@ export ARCHITECT_CLEARANCE="LEVEL_4_HOST"
     <details>
     <summary> Step 2.4 code hint: more than one way to do this one</summary>
 
-    There are many ways you can check to see if the variable is loaded. This is not an exhaustive list of commands...
+    > [!TIP]
+    >
+    > There are many ways you can check to see if the variable is loaded. 
+    
+    This is not an exhaustive list of commands...
     - <code>printenv</code> displays every loaded environment variable.
     - <code>env</code> works as an more-primitive alternative to list the variables.
     - <code>printenv ARCHITECT_CLEARANCE</code> checks the value of one specific variable.
@@ -133,7 +138,7 @@ You are an infrastructure engineer tasked with adding a new security rule to an 
     *Note: Running `git init` creates a hidden `.git` folder that tracks every byte changed in this directory.*
     
     If you haven't yet setup git user details in this container, you are going to want to do that now:
-
+    
         git config --global user.name "your_name_here"
         git config --global user.email "student@email.com"
         git config --global init.defaultBranch main
