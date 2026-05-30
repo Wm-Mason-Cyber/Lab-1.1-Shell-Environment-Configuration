@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y \
 
 # Configure SSH daemon
 RUN mkdir /var/run/sshd
+
 # Allow environment variables to be passed through SSH sessions if needed
-echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
+RUN echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
 
 # Create the standard lab student user (Password: CyberDefender2026)
 RUN useradd -m -s /bin/bash student && \
