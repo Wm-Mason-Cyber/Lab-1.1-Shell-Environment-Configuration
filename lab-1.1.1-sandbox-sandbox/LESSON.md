@@ -49,7 +49,7 @@ The next few steps you will do in all 3 instances, so you can explore how they w
     <details>
     <summary> Step 1.2 code hint </summary>
         
-    You can show this list with the command: <code>echo $PATH</code>
+    - You can show this list with the command: <code>echo $PATH</code>
     
     </details>
 
@@ -58,9 +58,8 @@ The next few steps you will do in all 3 instances, so you can explore how they w
     <details>
     <summary> Step 1.3 code hint </summary>
         
-    A. Move into you home directory (if you're there, you don't move): <code>cd ~</code>
-
-    B. List everthing in the directory, in a table format: <code>ls -lah</code>
+    - Move into you home directory (if you're there, you don't move): <code>cd ~</code>
+    - List everthing in the directory, in a table format: <code>ls -lah</code>
 
     </details>
 
@@ -70,7 +69,9 @@ The next few steps you will do in all 3 instances, so you can explore how they w
     <details>
     <summary> Step 2.1 code hint </summary>
         
-    To edit via terminal: <code>nano .bashrc</code> !There are many CLI text editor beyond <code>nano</code> as well.
+    - To edit via terminal: <code>nano .bashrc</code> 
+    > [!TIP] 
+    > There are many CLI text editor beyond <code>nano</code> as well.
     
     </details>
 
