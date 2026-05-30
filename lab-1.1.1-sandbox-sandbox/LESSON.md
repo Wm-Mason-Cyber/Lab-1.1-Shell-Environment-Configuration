@@ -70,9 +70,7 @@ The next few steps you will do in all 3 instances, so you can explore how they w
     <summary> Step 2.1 code hint </summary>
         
     - To edit via terminal: <code>nano .bashrc</code> 
-    > [!TIP] 
-    >
-    > There are many CLI text editors beyond <code>nano</code> as well.
+    > [!TIP] There are many CLI text editors beyond <code>nano</code> as well.
     
     </details>
 
@@ -87,9 +85,7 @@ export ARCHITECT_CLEARANCE="LEVEL_4_HOST"
     <details>
     <summary> Step 2.4 code hint: more than one way to do this one</summary>
 
-    > [!TIP]
-    >
-    > There are many ways you can check to see if the variable is loaded. 
+    > [!TIP] There are many ways you can check to see if the variable is loaded. 
     
     This is not an exhaustive list of commands...
     - <code>printenv</code> displays every loaded environment variable.
