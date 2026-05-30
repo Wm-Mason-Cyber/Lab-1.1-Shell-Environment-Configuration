@@ -1,3 +1,14 @@
+# all the student roster files are ignored
+bell1.csv
+bell2.csv
+bell3.csv
+bell4.csv
+bell5.csv
+bell6.csv
+bell7.csv
+students.csv
+!students.csv.example
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
