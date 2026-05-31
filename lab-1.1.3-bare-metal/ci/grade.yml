@@ -1,0 +1,39 @@
+# Lab 1.1.3 — Automated Grading Workflow
+#
+# TEACHER SETUP: Seeded into each student's Gitea repo by ci/setup_class.sh at:
+#   .gitea/workflows/grade.yml
+#
+# This file is intentionally thin. All grading logic lives in:
+#   ci/grade_checks.sh
+# Edit that file to change what is graded — do not add checks here.
+#
+# Runs automatically on every push to main.
+# Requires a gitea-act-runner registered to the Gitea server.
+# No internet access required.
+
+name: "Lab 1.1.3 — Automated Grading"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  grade:
+    name: "Grade — ${{ github.repository_owner }}"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository (full history required)
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Run grading checks
+        env:
+          GRADE_STUDENT: ${{ github.repository_owner }}
+        run: bash ci/grade_checks.sh
+
+      - name: Show grade report
+        if: always()
+        run: cat grade_report.json 2>/dev/null || echo "No report generated."
