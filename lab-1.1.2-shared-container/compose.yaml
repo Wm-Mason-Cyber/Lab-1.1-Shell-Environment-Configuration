@@ -1,0 +1,125 @@
+# Lab 1.1.2 — Shared Container: Docker Compose
+#
+# ONE CONTAINER PER CLASS PERIOD.  Each container:
+#   - Creates only that period's students (filtered from students.csv by PERIOD)
+#   - Gets its own isolated /home volume
+#   - Listens on a unique host port so all periods can run simultaneously
+#
+# STUDENT CONNECTION:
+#   ssh <username>@<classroom-ip> -p <port>
+#
+# TEACHER USAGE:
+#   Start all periods:       docker compose up -d
+#   Start one period:        docker compose up -d p2
+#   Stop (keep /home data):  docker compose stop
+#   Stop and wipe data:      docker compose down -v
+#
+# SETUP:
+#   1. Copy setup/students.csv.example → setup/students.csv and fill in real data.
+#      CSV format: username,password,first_name,last_name,period,...
+#      The PERIOD env var per service must match column 5 in your CSV.
+#   2. docker compose build
+#   3. docker compose up -d
+#
+# BETWEEN PERIODS (reset student work, keep accounts):
+#   docker compose exec p2 bash /opt/setup/reset_homes.sh /opt/setup/students.csv
+#
+# GRADING:
+#   docker compose exec p2 bash /opt/setup/grade_lab1_1.sh
+#
+# NOTE: SSH host keys are baked into the image at build time so they are stable
+# across container restarts.  If you rebuild the image, students will need to
+# remove the old entry from their known_hosts:
+#   ssh-keygen -R "[classroom-ip]:2202"
+
+x-period-base: &period-base
+  build: .
+  image: lab112:latest
+  restart: unless-stopped
+
+services:
+
+  p1:
+    <<: *period-base
+    container_name: lab112-p1
+    ports:
+      - "2201:22"
+    environment:
+      PERIOD: "1"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p1-homes:/home
+
+  p2:
+    <<: *period-base
+    container_name: lab112-p2
+    ports:
+      - "2202:22"
+    environment:
+      PERIOD: "2"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p2-homes:/home
+
+  p3:
+    <<: *period-base
+    container_name: lab112-p3
+    ports:
+      - "2203:22"
+    environment:
+      PERIOD: "3"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p3-homes:/home
+
+  p4:
+    <<: *period-base
+    container_name: lab112-p4
+    ports:
+      - "2204:22"
+    environment:
+      PERIOD: "4"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p4-homes:/home
+
+  p5:
+    <<: *period-base
+    container_name: lab112-p5
+    ports:
+      - "2205:22"
+    environment:
+      PERIOD: "5"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p5-homes:/home
+
+  p6:
+    <<: *period-base
+    container_name: lab112-p6
+    ports:
+      - "2206:22"
+    environment:
+      PERIOD: "6"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p6-homes:/home
+  
+  p7:
+    <<: *period-base
+    container_name: lab112-p7
+    ports:
+      - "2207:22"
+    environment:
+      PERIOD: "7"
+    volumes:
+      - ./setup/students.csv:/opt/setup/students.csv:ro
+      - p7-homes:/home
+
+volumes:
+  p1-homes:
+  p2-homes:
+  p3-homes:
+  p4-homes:
+  p5-homes:
+  p6-homes:
