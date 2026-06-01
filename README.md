@@ -1,4 +1,4 @@
-# Lab 1.1 — Shell Environment Configuration
+# Lab 1.1 — Git-Conflicts-Secrets
 
 AP Cybersecurity Unit 1 lab. Students configure shell environments, manipulate `.bashrc`, practice `git` branching and conflict resolution, and learn why secrets must never be committed to version control.
 
