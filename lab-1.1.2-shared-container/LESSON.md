@@ -117,8 +117,9 @@ You are working on a federated central server infrastructure. You and a classmat
 This will give you a local copy of the server’s files. Since this ‘network matrix’ is tracked by git, you can push/pull changes from your version to the shared copy.
 
 1. Clone the central configuration tree down to your local staging directory.  
-   > [!IMPORANT]  
-   > This Step 1.1 works best when everyone in the class does it at *nearly* the same time. It makes it more of a 
+
+> [!IMPORANT]  
+> This Step 1.1 works best when everyone in the class does it at *nearly* the same time. It makes it more of a 
 
 ```shell
 git clone /srv/class/network_matrix.git ~/network_matrix
