@@ -118,7 +118,7 @@ This will give you a local copy of the server’s files. Since this ‘network m
 
 1. Clone the central configuration tree down to your local staging directory.  
 
-> [!IMPORANT]  
+> [!IMPORTANT]  
 > This Step 1.1 works best when everyone in the class does it at *nearly* the same time. It makes it more of a 
 
 ```shell
