@@ -9,6 +9,9 @@ bell7.csv
 students.csv
 !students.csv.example
 
+# grade reports, usually created when testing things
+grade_report.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
