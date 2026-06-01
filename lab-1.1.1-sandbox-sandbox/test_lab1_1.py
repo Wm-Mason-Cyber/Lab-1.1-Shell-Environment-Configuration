@@ -4,7 +4,7 @@ import pytest
 
 # Helper function to run commands inside the student's actual Bash environment
 def run_in_bash(command, login_shell=True):
-    shell_flag = "-l" if login_shell else "-c"
+    shell_flag = "-lc" if login_shell else "-c"   # Claude recommmended "-lc" for login shell
     # Sourcing profile/bashrc files by simulating an interactive/login shell
     process = subprocess.Popen(
         ["/bin/bash", shell_flag, command],
