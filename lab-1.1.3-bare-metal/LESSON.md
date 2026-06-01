@@ -122,9 +122,9 @@ To force the active shell process to immediately read the revised state configur
 
 ```shell
 source .bashrc
-echo $ARCHITECT_CLEARANCE
 ```
 6. Finally, run an inspection command again to see that the new variable has been loaded correctly.
+    - See the command hint above from 2.4 for guidance.
 
 ### Step 3: Simulating a Severe Leakage Incident
 

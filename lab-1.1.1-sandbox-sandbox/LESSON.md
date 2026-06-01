@@ -70,7 +70,7 @@ For every student in a period, the server spins up an isolated container.
     <details>
     <summary> Step 2.1 command hint </summary>
         
-    - To edit via terminal: <code>nano .bashrc</code> 
+    - <code>nano ~/.bashrc</code> is probably the cleanest way to do this.
     > [!TIP] There are many CLI text editors beyond <code>nano</code> as well.
     
     </details>
@@ -82,6 +82,15 @@ export ARCHITECT_CLEARANCE="LEVEL_4_HOST"
 ```
 
 3. Save and close the text tool.  
+    <details>
+    <summary> Step 2.3 command hint: save and exit in <code>nano</code></summary>
+
+    - To exit, you press <code>CTRL + x</code> at any time.
+    - If there are changes in the file, nano will ask if you want to save/write them: type <code>y</code>.
+    - Then nano will verify the filename, unless you want to change it, just press <code>ENTER</code>.
+
+    </details>
+    
 4. Run an inspection command to check your new variable. Notice it outputs *nothing*\! Why? The current running shell process has not loaded the revised profile state yet.  
     <details>
     <summary> Step 2.4 command hint: more than one way to do this one</summary>
@@ -108,6 +117,7 @@ To force the active shell process to immediately read the revised state configur
 source .bashrc
 ```
 6. Finally, run an inspection command again to see that the new variable has been loaded correctly.
+    - See the command hint above from 2.4 for guidance.
 
 ## L1.1.1 Mission Overview
 
@@ -175,7 +185,7 @@ You are an infrastructure engineer tasked with adding a new security rule to an 
 
 3. Save the file, stage it, and commit it to your master/main history timeline with a clear message.
     <details>
-    <summary> Step 2.2 command hint </summary>
+    <summary> Step 2.3 command hint </summary>
 
     - <code>git add firewall_rules.config</code> will add the changes to Git's staging area.
     - <code>git commit -m "feat: establish baseline production firewall rules"</code> makes a commit.
@@ -206,7 +216,7 @@ You are an infrastructure engineer tasked with adding a new security rule to an 
     RULE 04: DENY all other inbound traffic
     ```
     <details>
-    <summary> Step 2.2 command hint </summary>
+    <summary> Step 3.2 command hint </summary>
         
     <code>nano firewall_rules.config</code> is probably the 'cleanest' way to do this one... 
 
