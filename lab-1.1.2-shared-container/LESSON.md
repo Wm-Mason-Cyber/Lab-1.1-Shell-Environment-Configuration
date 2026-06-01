@@ -119,7 +119,11 @@ This will give you a local copy of the server’s files. Since this ‘network m
 1. Clone the central configuration tree down to your local staging directory.  
 
 > [!IMPORTANT]  
-> This Step 1.1 works best when everyone in the class does it at *nearly* the same time. It makes it more of a 
+> This Step 1.1 works best when everyone in the class does it at *nearly* the same time. 
+> 
+> It makes it more of a 'race' to see who can get the first push, and who has a conflict. 
+> 
+> Deliberately pre-planning conflicts with friends/partners is a fun extension here. Try it!
 
 ```shell
 git clone /srv/class/network_matrix.git ~/network_matrix
